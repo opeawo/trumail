@@ -116,7 +116,10 @@ h2.title .soft{color:#9AA3B2}
 .features{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .feature{position:relative;border-radius:var(--radius);background:var(--ink);color:#fff;min-height:340px;overflow:hidden;padding:28px;display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate}
 .feature .art{position:absolute;inset:0;z-index:-1}
-.feature .art svg{width:100%;height:100%}
+.feature .art{display:flex;justify-content:flex-end;align-items:flex-start;background:radial-gradient(420px 300px at 78% 22%,rgba(13,96,216,.28),transparent 70%)}
+.feature .art svg{width:62%;max-width:300px;height:auto;margin:6px 4% 0 0;fill:none;stroke:var(--blue-300);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;opacity:.45;-webkit-mask-image:linear-gradient(200deg,#000 35%,transparent 90%);mask-image:linear-gradient(200deg,#000 35%,transparent 90%);transition:opacity .4s ease,transform .6s ease}
+.feature .art svg .f{fill:var(--ink)}
+.feature:hover .art svg{opacity:.65;transform:translateY(-4px) scale(1.02)}
 .feature::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(5,8,15,.92) 85%);z-index:-1}
 .feature h3{font-size:20px;font-weight:600;display:flex;align-items:center;gap:10px;margin-bottom:8px}
 .feature h3 svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:1.8}
@@ -230,6 +233,8 @@ details p{margin-top:10px;font-size:15px;color:var(--muted)}
 .foot-bottom{margin-top:90px;padding-top:28px;border-top:1px solid var(--line-dark);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--muted-dark)}
 .foot-bottom nav{padding:0;gap:22px;display:flex}
 .foot-bottom a:hover{color:#fff}
+.deposit{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:#DCE8FB;margin-top:24px}
+.deposit svg{flex:none;width:18px;height:18px;fill:none;stroke:var(--blue-300);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .disclaimer{font-size:12px;color:#6B7689;margin-top:22px;max-width:900px}
 
 /* Reveal */
@@ -360,25 +365,25 @@ details p{margin-top:10px;font-size:15px;color:var(--muted)}
     </div>
     <div class="features">
       <article class="feature reveal">
-        <div class="art" data-art="estate"></div>
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 200 200"><path d="M14 172H186" stroke-dasharray="4 7"/><path d="M28 186H172" stroke-dasharray="4 7"/><path d="M40 95 100 45l60 50"/><path d="M130 62V50h12v22"/><rect x="50" y="88" width="100" height="72" rx="2"/><rect x="88" y="120" width="24" height="40" rx="2"/><rect x="62" y="102" width="18" height="16" rx="2"/><rect x="120" y="102" width="18" height="16" rx="2"/><path d="M20 172v-12M180 172v-12"/></svg></div>
         <h3><svg viewBox="0 0 24 24"><path d="M3 11 12 4l9 7v9H3z"/><path d="M9 20v-6h6v6"/></svg>Real Estate &amp; Land</h3>
         <p>Take part in land and property with far less capital than buying a whole plot. Own a fraction, bank land as a community, or share in income-generating property.</p>
         <ul><li>Fractional ownership</li><li>Community land banking</li><li>Income property</li><li>Group ownership</li></ul>
       </article>
       <article class="feature reveal">
-        <div class="art" data-art="invest"></div>
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 200 200"><path d="M36 160v10a26 8 0 0 0 52 0v-10" class="f"/><ellipse cx="62" cy="160" rx="26" ry="8" class="f"/><path d="M36 148v10a26 8 0 0 0 52 0v-10" class="f"/><ellipse cx="62" cy="148" rx="26" ry="8" class="f"/><path d="M36 136v10a26 8 0 0 0 52 0v-10" class="f"/><ellipse cx="62" cy="136" rx="26" ry="8" class="f"/><path d="M102 160v10a26 8 0 0 0 52 0v-10" class="f"/><ellipse cx="128" cy="160" rx="26" ry="8" class="f"/><path d="M102 148v10a26 8 0 0 0 52 0v-10" class="f"/><ellipse cx="128" cy="148" rx="26" ry="8" class="f"/><path d="M102 136v10a26 8 0 0 0 52 0v-10" class="f"/><ellipse cx="128" cy="136" rx="26" ry="8" class="f"/><path d="M102 124v10a26 8 0 0 0 52 0v-10" class="f"/><ellipse cx="128" cy="124" rx="26" ry="8" class="f"/><path d="M102 112v10a26 8 0 0 0 52 0v-10" class="f"/><ellipse cx="128" cy="112" rx="26" ry="8" class="f"/><path d="M38 92 78 66l26 14 52-46"/><path d="M136 34h20v20"/></svg></div>
         <h3><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>Investment &amp; Savings</h3>
         <p>Structured savings and investment products offered through licensed financial partners, for you alone or for your group.</p>
         <ul><li>Fixed income</li><li>Collective investments</li><li>Recurring savings</li></ul>
       </article>
       <article class="feature reveal">
-        <div class="art" data-art="sme"></div>
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 200 200"><g transform="translate(138 66)"><rect x="-6" y="-40" width="12" height="15" rx="2" class="f" transform="rotate(0)"/><rect x="-6" y="-40" width="12" height="15" rx="2" class="f" transform="rotate(45)"/><rect x="-6" y="-40" width="12" height="15" rx="2" class="f" transform="rotate(90)"/><rect x="-6" y="-40" width="12" height="15" rx="2" class="f" transform="rotate(135)"/><rect x="-6" y="-40" width="12" height="15" rx="2" class="f" transform="rotate(180)"/><rect x="-6" y="-40" width="12" height="15" rx="2" class="f" transform="rotate(225)"/><rect x="-6" y="-40" width="12" height="15" rx="2" class="f" transform="rotate(270)"/><rect x="-6" y="-40" width="12" height="15" rx="2" class="f" transform="rotate(315)"/><circle r="30" class="f"/><circle r="11"/></g><path d="M26 128h70v36H26z"/><path d="M96 138h26l16 16v10H96z"/><circle cx="48" cy="168" r="10"/><circle cx="120" cy="168" r="10"/><path d="M14 180h170"/></svg></div>
         <h3><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>SME &amp; Productive Asset Finance</h3>
         <p>We finance the equipment, machinery, vehicles and inventory that raise what your business can earn, instead of handing out unrestricted cash loans.</p>
         <ul><li>Equipment</li><li>Vehicles</li><li>Inventory</li><li>Machinery</li></ul>
       </article>
       <article class="feature reveal">
-        <div class="art" data-art="growth"></div>
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 200 200"><circle cx="100" cy="86" r="16"/><path d="M70 146a30 30 0 0 1 60 0"/><circle cx="54" cy="102" r="12"/><path d="M32 150a22 22 0 0 1 44 0"/><circle cx="146" cy="102" r="12"/><path d="M124 150a22 22 0 0 1 44 0"/><path d="M100 66V36"/><path d="M100 50c-12 0-18-8-18-16 12 0 18 8 18 16z"/><path d="M100 44c12 0 18-8 18-16-12 0-18 8-18 16z"/><path d="M20 170h160"/></svg></div>
         <h3><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.5c3 0 6 1.8 6 5.5"/></svg>Community &amp; Business Growth</h3>
         <p>Save and invest with your circle, and get connected to capital, grants, training and partners through banks, DFIs, foundations and government programmes.</p>
         <ul><li>Savings circles</li><li>Grants</li><li>Training</li><li>Partnerships</li></ul>
@@ -557,6 +562,7 @@ details p{margin-top:10px;font-size:15px;color:var(--muted)}
       <span>© <span id="yr"></span> OurMonee Capital. All rights reserved.</span>
       <nav><a href="#">Terms of use</a><a href="#">Privacy policy</a><a href="#">Cookie policy</a></nav>
     </div>
+    <p class="deposit"><svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>Deposits are held with Fame Microfinance Bank, licensed by the Central Bank of Nigeria (CBN).</p>
     <p class="disclaimer">OurMonee Capital is a technology platform. Regulated activities, including custody, lending and investment management, are carried out by licensed partner institutions. Investments carry risk and the value of assets can go down as well as up. Targets on this page are ambitions, not forecasts or guarantees.</p>
   </div>
 </footer>
@@ -600,13 +606,6 @@ details p{margin-top:10px;font-size:15px;color:var(--muted)}
   draw(document.getElementById('phoneChart'),{w:240,h:150,n:26,seed:7,drift:.22,up:'#5B9BFF',down:'#334155',delay:30});
   draw(document.getElementById('phoneChart2'),{w:270,h:120,n:30,seed:21,drift:.2,up:'#5B9BFF',down:'#334155',delay:20});
   draw(document.getElementById('bandChart'),{w:1400,h:300,n:70,seed:3,drift:.18,up:'rgba(255,255,255,.95)',down:'rgba(255,255,255,.28)',line:'#fff',delay:15,wick:1.5,rx:2,pad:20});
-
-  // Decorative candlestick art for the product cards
-  var arts={estate:[11,.3],invest:[5,.25],sme:[17,.1],growth:[29,.28]};
-  document.querySelectorAll('[data-art]').forEach(function(el){
-    var a=arts[el.dataset.art];
-    draw(el,{w:600,h:340,n:22,seed:a[0],drift:a[1],up:'rgba(13,96,216,.85)',down:'rgba(148,163,184,.25)',delay:25,wick:2,rx:3,pad:30});
-  });
 
   // Ownership calculator
   var amt=document.getElementById('amt'),price=document.getElementById('price');
